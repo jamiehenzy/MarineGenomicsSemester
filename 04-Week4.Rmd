@@ -22,8 +22,6 @@ knitr::opts_chunk$set(comment = "#>", echo = TRUE, fig.width=4)
 
 You'll find the lecture discussing the definition and identification of genetic variation [here](https://github.com/BayLab/MarineGenomicsSemester/blob/main/ppt/MarineGenomics_Lecture_w4.pdf)
 
-We'll be working on the terminal in jetstream for the entirety of this lesson.
-
 Here is the road map of our actions for this class (as shown in lecture):
 
 ![mapping variants](./figs/week4/roadmap_mapping.png)
@@ -45,22 +43,15 @@ tar -xzvf week4_semester.tar.gz
 
 ```
 
-Next we need to install a few programs that will allow us to do what we need to do. This will all take a few minutes!
+Next we need to load a few modules that will allow us to do what we need to do. This will all take a few minutes!
 
-The programs that we are installing:
+Load the latest versions of:
 
 + samtools: allows us to filter and view our mapped data
 + bowtie2: to map our reads to the reference genome
-+ cutadapt: will trim adaptor sequences from the reads
 + fastqc: used to view the quality of the read files
 
-```html
-  sudo apt-get -y update && \
-  sudo apt-get -y install samtools bowtie2 cutadapt fastqc 
-  
-```
-
-And one more program that we'll install separately. This is `angsd` which we will use to find variants in our data. The first command navigates you to your home directory.
+<!-- And one more program that we'll install separately. This is `angsd` which we will use to find variants in our data. The first command navigates you to your home directory.
 
 ```html
   cd
@@ -69,7 +60,7 @@ And one more program that we'll install separately. This is `angsd` which we wil
   cd htslib;make;cd ../angsd ;make HTSSRC=../htslib
   
 ```
-
+-->
 Now we're ready to get going. The first thing we'll do is have a look at our data and directories to make sure we know where everything is. 
 
 ```html
